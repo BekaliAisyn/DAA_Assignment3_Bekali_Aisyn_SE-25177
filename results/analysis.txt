@@ -1,0 +1,99 @@
+Slope of edge_scans against m on log-log axes (5 points per line)
+  Kruskal          sparse  slope = 1.055
+  Kruskal          dense   slope = 1.119
+  Prim             sparse  slope = 1.000
+  Prim             dense   slope = 1.000
+  Kosaraju         sparse  slope = 1.000
+  Kosaraju         dense   slope = 1.000
+  Kahn             sparse  slope = 1.000
+  Kahn             dense   slope = 1.000
+  DagShortestPath  sparse  slope = 1.000
+  DagShortestPath  dense   slope = 1.000
+
+Slope of comparisons against m (log-log)
+  Kruskal          sparse  slope = 1.055
+  Kruskal          dense   slope = 1.016
+  Prim             sparse  slope = 1.109
+  Prim             dense   slope = 1.090
+
+Counter divided by formula
+  Kruskal: ratio1 = dsu_ops/E, ratio2 = dsu_ops/edge_scans, ratio3 = comparisons/(E*log2 E)
+  Prim: ratio1 = edge_scans/(2E), ratio2 = comparisons/(E*log2 E), ratio3 = comparisons/(2E*log2 2E)
+  Kosaraju: ratio1 = edge_scans/(V+E), ratio2 = edge_scans/(2E)
+  Kahn: ratio1 = edge_scans/(V+E), ratio2 = edge_scans/E
+  DagShortestPath: ratio1 = edge_scans/(V+E), ratio2 = comparisons/E
+  algorithm        density        n          ratio1          ratio2          ratio3
+  Kruskal          sparse      1000          1.7908          2.3241          0.8914
+  Kruskal          sparse      3162          2.0191          2.2825          0.9069
+  Kruskal          sparse     10000          2.1818          2.2588          0.8692
+  Kruskal          sparse     31623          2.2317          2.2523          0.8091
+  Kruskal          sparse    100000          2.2483          2.2502          0.7447
+  Kruskal          dense       1000          0.4802          2.2322          0.9027
+  Kruskal          dense       3162          0.5063          2.2191          0.8464
+  Kruskal          dense      10000          0.4647          2.2411          0.7839
+  Kruskal          dense      31623          0.6540          2.1656          0.7200
+  Kruskal          dense     100000          0.7936          2.1345          0.6662
+  Prim             sparse      1000          1.0000          1.8290          0.8440
+  Prim             sparse      3162          1.0000          1.8654          0.8689
+  Prim             sparse     10000          1.0000          1.8993          0.8914
+  Prim             sparse     31623          1.0000          1.9293          0.9109
+  Prim             sparse    100000          1.0000          1.9457          0.9232
+  Prim             dense       1000          1.0000          1.8262          0.8534
+  Prim             dense       3162          1.0000          1.8487          0.8698
+  Prim             dense      10000          1.0000          1.8676          0.8836
+  Prim             dense      31623          1.0000          1.8803          0.8938
+  Prim             dense     100000          1.0000          1.8920          0.9029
+  Kosaraju         sparse      1000          1.6000          1.0000             nan
+  Kosaraju         sparse      3162          1.6000          1.0000             nan
+  Kosaraju         sparse     10000          1.6000          1.0000             nan
+  Kosaraju         sparse     31623          1.6000          1.0000             nan
+  Kosaraju         sparse    100000          1.6000          1.0000             nan
+  Kosaraju         dense       1000          1.9048          1.0000             nan
+  Kosaraju         dense       3162          1.9048          1.0000             nan
+  Kosaraju         dense      10000          1.9048          1.0000             nan
+  Kosaraju         dense      31623          1.9048          1.0000             nan
+  Kosaraju         dense     100000          1.9048          1.0000             nan
+  Kahn             sparse      1000          0.8000          1.0000             nan
+  Kahn             sparse      3162          0.8000          1.0000             nan
+  Kahn             sparse     10000          0.8000          1.0000             nan
+  Kahn             sparse     31623          0.8000          1.0000             nan
+  Kahn             sparse    100000          0.8000          1.0000             nan
+  Kahn             dense       1000          0.9524          1.0000             nan
+  Kahn             dense       3162          0.9524          1.0000             nan
+  Kahn             dense      10000          0.9524          1.0000             nan
+  Kahn             dense      31623          0.9524          1.0000             nan
+  Kahn             dense     100000          0.9524          1.0000             nan
+  DagShortestPath  sparse      1000          0.8000          1.0000             nan
+  DagShortestPath  sparse      3162          0.8000          1.0000             nan
+  DagShortestPath  sparse     10000          0.8000          1.0000             nan
+  DagShortestPath  sparse     31623          0.8000          1.0000             nan
+  DagShortestPath  sparse    100000          0.8000          1.0000             nan
+  DagShortestPath  dense       1000          0.9524          1.0000             nan
+  DagShortestPath  dense       3162          0.9524          1.0000             nan
+  DagShortestPath  dense      10000          0.9524          1.0000             nan
+  DagShortestPath  dense      31623          0.9524          1.0000             nan
+  DagShortestPath  dense     100000          0.9524          1.0000             nan
+
+Kruskal share of edges examined
+  sparse  n=   1000 edge_scans/m = 0.7705
+  sparse  n=   3162 edge_scans/m = 0.8846
+  sparse  n=  10000 edge_scans/m = 0.9659
+  sparse  n=  31623 edge_scans/m = 0.9909
+  sparse  n= 100000 edge_scans/m = 0.9992
+  dense   n=   1000 edge_scans/m = 0.2151
+  dense   n=   3162 edge_scans/m = 0.2281
+  dense   n=  10000 edge_scans/m = 0.2074
+  dense   n=  31623 edge_scans/m = 0.3020
+  dense   n= 100000 edge_scans/m = 0.3718
+
+Median time in ms
+  Kruskal          sparse       2.16       9.07      23.24      26.46     116.67
+  Kruskal          dense       10.41      48.38      64.88     206.18     588.10
+  Prim             sparse       2.37       4.32      17.45      84.23     285.28
+  Prim             dense        8.49      27.93      96.82     579.85    2143.57
+  Kosaraju         sparse       2.83       2.78       8.07      18.67     139.06
+  Kosaraju         dense        6.65       7.61      34.73     170.70     663.62
+  Kahn             sparse       0.55       0.55       1.24       3.18      12.27
+  Kahn             dense        0.63       1.55       2.13      10.35      36.93
+  DagShortestPath  sparse       0.66       0.68       2.00       3.14      12.68
+  DagShortestPath  dense        0.47       1.09       2.21      18.95      35.26
